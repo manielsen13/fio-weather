@@ -26,8 +26,6 @@ function Search({
     try {
       await fetchData();
     } catch {
-      setCurrentWeatherData(null);
-      setForecastData(null);
       console.error("API error.");
       alert(
         "Hey! You may have entered an invalid city name. Please enter a valid city name and try again. If you're still recieving an error with a valid city name, there's a problem with the weather API, and you'll have to wait a moment and try again."
