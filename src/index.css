@@ -67,3 +67,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.inptContainer {
+  display: flex;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
