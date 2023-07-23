@@ -33,13 +33,6 @@ function Search({
     }
   };
 
-  const handleReset = () => {
-    setCity("");
-    setState("");
-    setForecastData(null);
-    setCurrentWeatherData(null);
-  };
-
   const fetchWeatherData = async () => {
     const currentWeatherResponse = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},US&units=imperial&appid=${
@@ -53,6 +46,13 @@ function Search({
     );
     setCurrentWeatherData(currentWeatherResponse.data);
     setForecastData(forecastResponse.data);
+  };
+
+  const handleReset = () => {
+    setCity("");
+    setState("");
+    setForecastData(null);
+    setCurrentWeatherData(null);
   };
 
   return (
