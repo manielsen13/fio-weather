@@ -15,10 +15,12 @@ function CurrentWeatherCard({ currentWeatherData }) {
 
   return (
     <>
-      <div className="cardContainer">
-        <p className="currentTime">{currentTime}</p>
+      <div className="select-none relative flex flex-col gap-10 text-customGray items-center justify-center p-10 w-72 border-customLightBlue border-4 rounded-3xl">
+        <p className="absolute -top-8 left-6 text-2xl text-customLightBlue bg-customBlack p-3">
+          {currentTime}
+        </p>
         <WeatherImage id={currentWeatherData.weather[0].id} />
-        <p>{Math.ceil(currentWeatherData.main.temp)} °F</p>
+        <p className="text-3xl">{Math.ceil(currentWeatherData.main.temp)} °F</p>
         <p>{descriptionWords.join(" ")}</p>
       </div>
     </>

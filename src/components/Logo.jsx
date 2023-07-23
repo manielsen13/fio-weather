@@ -2,9 +2,9 @@ import logoImg from "../assets/logo.png";
 
 function Logo() {
   return (
-    <div className="logoContainer">
-      <img src={logoImg} className="image image--logo"></img>
-      <h1>Weather</h1>
+    <div className="flex flex-col items-center self-center gap-2 select-none">
+      <img src={logoImg} className="w-20 h-auto"></img>
+      <h1 className="text-2xl text-customGray">Weather</h1>
     </div>
   );
 }
