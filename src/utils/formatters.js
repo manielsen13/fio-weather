@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { utcToZonedTime } from "date-fns-tz";
 
 const formatTimeEST = (timeInUTC) => {
@@ -30,4 +30,11 @@ const getCapitalizedWords = (string) => {
   return words;
 };
 
-export { formatTimeEST, getCapitalizedWords };
+const formatWeatherDate = (timestamp) => {
+  const timezone = "America/New_York";
+  const utcDate = parseISO(new Date(timestamp * 1000).toISOString());
+  const estDate = utcToZonedTime(utcDate, timezone);
+  return format(estDate, "MM-dd-yyyy HH:mm:ss");
+};
+
+export { formatTimeEST, getCapitalizedWords, formatWeatherDate };
