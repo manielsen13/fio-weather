@@ -2,15 +2,11 @@ import { format, parseISO } from "date-fns";
 import { utcToZonedTime } from "date-fns-tz";
 
 const formatTimeEST = (timeInUTC) => {
-  console.log(timeInUTC);
   const estTimezone = "America/New_York";
   const estTime = utcToZonedTime(timeInUTC, estTimezone);
-  console.log(estTime);
 
   const formattedHour = format(estTime, "hh");
   const formattedMinute = format(estTime, "mm");
-  console.log(formattedHour);
-  console.log(formattedHour[0]);
 
   let formattedTime;
 
