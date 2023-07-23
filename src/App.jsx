@@ -31,7 +31,7 @@ function App() {
         getImportantForecastStatsByDay(
           organizeWeatherDataByDay(forecastData.list)
         ).map((day) => {
-          return <DailyForecastCard day={day} />;
+          return <DailyForecastCard day={day} key={day.date} />;
         })}
     </div>
   );
