@@ -13,7 +13,7 @@ function Search({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //checks
+    //quick form checks
     if (city === "" || state === "") {
       alert("Please fill out both a city and a state.");
       return;
@@ -24,7 +24,7 @@ function Search({
     }
     //try api call
     try {
-      await fetchData();
+      await fetchWeatherData();
     } catch {
       console.error("API error.");
       alert(
@@ -40,7 +40,7 @@ function Search({
     setCurrentWeatherData(null);
   };
 
-  const fetchData = async () => {
+  const fetchWeatherData = async () => {
     const currentWeatherResponse = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},US&units=imperial&appid=${
         import.meta.env.VITE_WEATHER_API_KEY
