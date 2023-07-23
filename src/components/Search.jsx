@@ -28,7 +28,7 @@ function Search({
     } catch {
       console.error("API error.");
       alert(
-        "Hey! You may have entered an invalid city name. Please enter a valid city name and try again. If you're still recieving an error with a valid city name, there's a problem with the weather API, and you'll have to wait a moment and try again."
+        "Hey! You may have entered an invalid city name. Please enter a valid city name and try again. Remove all unnecessary spaces in your input if there are any. If you're still recieving an error after entering a valid city name, there's a problem with the weather API, and you'll have to wait a moment and try again."
       );
     }
   };

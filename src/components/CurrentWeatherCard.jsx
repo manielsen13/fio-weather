@@ -21,7 +21,7 @@ function CurrentWeatherCard({ currentWeatherData }) {
         </p>
         <WeatherImage id={currentWeatherData.weather[0].id} />
         <p className="text-3xl">{Math.ceil(currentWeatherData.main.temp)} °F</p>
-        <p>{descriptionWords.join(" ")}</p>
+        <p className="text-xl">{descriptionWords.join(" ")}</p>
       </div>
     </>
   );
